@@ -6,15 +6,12 @@ Here, we use both the reconstruction error and also the kernel density estimatio
 based on the vectors in the latent space. We will consider the bottleneck layer output
 from our autoencoder as the latent space. 
 
-This code uses the malarial data set but it can be easily applied to 
-any application. 
-
 Data from: https://lhncbc.nlm.nih.gov/LHC-publications/pubs/MalariaDatasets.html
 """
 
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, UpSampling2D
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, UpSampling2D
 
 from PIL import Image
 import matplotlib.pyplot as plt
@@ -197,8 +194,8 @@ anomaly_values = calc_density_and_recon_error(anomaly_batch)
 
 #Now, input unknown images and sort as Good or Anomaly
 def check_anomaly(img_path):
-    density_threshold = 2500 #Set this value based on the above exercise
-    reconstruction_error_threshold = 0.004 # Set this value based on the above exercise
+    density_threshold = 2900 #Set this value based on the above exercise, change it accordingly
+    reconstruction_error_threshold = 0.008 # Set this value based on the above exercise
     img  = Image.open(img_path)
     img = np.array(img.resize((128,128), Image.ANTIALIAS))
     plt.imshow(img)
