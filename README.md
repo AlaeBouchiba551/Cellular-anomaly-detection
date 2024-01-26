@@ -12,7 +12,7 @@ Le jeu de données utilisé dans ce projet provient du [LHNCBC](https://lhncbc.n
 
 ## Structure du Projet
 
-- **autoencoder_detection.py**: Le script principal qui contient le code pour construire, former et évaluer le modèle d'autoencodeur.
+- **détection d'anomalie.py**: Le script principal qui contient le code pour construire, former et évaluer le modèle d'autoencodeur.
 - **cell_images/**: Le répertoire sauveguardée contenant les données d'entraînement et de test, divisées en images saines et infectées.
 - **README.md**: Le fichier que vous lisez actuellement, fournissant des informations sur le projet et son utilisation.
 
